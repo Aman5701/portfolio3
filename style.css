@@ -661,7 +661,7 @@ section{
 .portfolio .box-container .animate5,
 .portfolio .box-container .animate8,
 .portfolio .box-container .animate11{
-    transform: skew(110deg);
+    transform: skew(90deg);
     transition: 2s;
 }
 
