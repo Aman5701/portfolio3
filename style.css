@@ -167,6 +167,10 @@ section{
 
 
 /* About starts */
+.about{
+    background-color: #313030;
+}
+
 .heading{
     text-align: center;
     margin: 0 6rem;
@@ -279,6 +283,10 @@ section{
 
 
 /* Portfolio starts */
+.portfolio{
+    background-color: #4f4f4f;
+}
+
 .portfolio .box-container{
     display: flex;
     align-items: center;
@@ -476,6 +484,10 @@ section{
     html{
         font-size: 50%;
     }
+
+    .copyright{
+        font-size: 0.875;
+    }
 }
 
 
@@ -503,4 +515,158 @@ section{
     .contact .row form{
         margin: 3rem 0;
     }
+}
+
+
+
+
+/* -----------------Animate on Scroll----------------- */
+/* home */
+.home, .about, .education{
+    flex-direction: column;
+    align-items: start;
+    min-height: 100vh;
+    /* overflow: hidden; */
+}
+
+.home .animate{
+    transform: translateX(-400%);
+}
+
+.home.show-animate .animate{
+    transform: translateX(0);
+    transition: 1s;
+}
+
+
+/* about */
+.about{
+    align-items: center;
+}
+
+.about h1 {
+    transform: skew(90deg);
+    transition: 1s;
+}
+
+.about .info .animate{
+    transform: translate(-200%, 200px);
+    transition: 1s;
+}
+
+
+.about .counter .b1{
+    transform: translate(-500%, 500px);
+}
+.about .counter .b2{
+    transform: translate(500%, 500px);
+}
+.about .counter .b3{
+    transform: translate(500%, 250%);
+}
+.about .counter .b4{
+    transform: translate(500%, -1000px);
+}
+
+
+.about.show-animate .animate{
+    transform: skew(0);
+    transition: 1s;
+}
+
+
+
+/* education */
+.education{
+    align-items: center;
+}
+.education h1 {
+    transform: skew(90deg);
+    transition: 1s;
+}
+.education.show-animate .animate{
+    transform: skew(0);
+    transition: 1s;
+}
+
+.education .box-container .box1{
+    transform: translate(500%, 700px);
+    transition: 1s;
+}
+.education .box-container .box2{
+    transform: translate(500%, 800px);
+    transition: 1s;
+}
+.education .box-container .box3{
+    transform: translate(500%, 900px);
+    transition: 1s;
+}
+.education .box-container .box4{
+    transform: translate(500%, 1000px);
+    transition: 1s;
+}
+
+
+.education.show-animate .box1 {
+   transform: translate(0);
+    transition: 1s;
+}
+.education.show-animate .box2 {
+    transform: translate(0);
+     transition: 1.5s;
+ }
+ .education.show-animate .box3 {
+    transform: translate(0);
+     transition: 2s;
+ }
+ .education.show-animate .box4 {
+    transform: translate(0);
+     transition: 2.5s;
+ }
+
+
+
+
+ /* portfolio */
+ .portfolio{
+    align-items: center;
+ }
+ .portfolio h1 {
+    transform: skew(90deg);
+    transition: 1s;
+}
+
+.portfolio.show-animate .animate{
+    transform: skew(0);
+}
+
+
+.portfolio .box-container .animate1,
+.portfolio .box-container .animate4,
+.portfolio .box-container .animate7,
+.portfolio .box-container .animate10,
+.portfolio .box-container .animate13{
+    transform: translate(500%, -500%);
+    transition: 1s;
+}
+.portfolio .box-container .animate3,
+.portfolio .box-container .animate6,
+.portfolio .box-container .animate9,
+.portfolio .box-container .animate12,
+.portfolio .box-container .animate14{
+    transform: translate(-500%, -500%);
+    transition: 1s;
+}
+.portfolio .box-container .animate2,
+.portfolio .box-container .animate5,
+.portfolio .box-container .animate8,
+.portfolio .box-container .animate11{
+    transform: skew(110deg);
+    transition: 2s;
+}
+
+.portfolio.show-animate .box{
+    transform: translateX(0);
+    transform: skew(0);
+    transition: 1.5s;
 }
