@@ -1,9 +1,23 @@
 /* Page CSS */
 :root{
     --yellow: #f9ca24;
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --ternary-color: #bab9b9;
+    --fourth-color: #8b8b8b;
 }
+
+.dark-theme{
+    --primary-color: #edf2fc;
+    --secondary-color: #000000;
+    --ternary-color: #1a1a1a;
+    --fourth-color: #333;
+}
+
+
 *{
     font-family:   'Times New Roman';
+    font-weight: bold;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,24 +29,23 @@
 }
 *::selection{
     background: var(--yellow);
-    color: #333;
+    color: var(--secondary-color);
 }
 html{
     font-size: 62.5%;
     overflow-x: hidden;
-    /* scroll-behavior: smooth; */
 }
 html::-webkit-scrollbar{
     width: 1.4rem;
 }
 html::-webkit-scrollbar-track{
-    background: #222;
+    background: var(--secondary-color);
 }
 html::-webkit-scrollbar-thumb{
     background: var(--yellow);
 }
 body{
-    background: #111;
+    background: var(--secondary-color);
     overflow-x: hidden;
     padding-left: 35rem;
 }
@@ -47,7 +60,7 @@ header{
     z-index: 1000;
     height: 100%;
     width: 35rem;
-    background: #1a1a1a;
+    background: var(--ternary-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,12 +79,12 @@ header .user img{
 
 header .user .name{
     font-size: 3.5rem;
-    color: #fff;
+    color: var(--primary-color);
 }
 
 header .user .post{
     font-size: 2rem;
-    color: #eee;
+    color: var(--primary-color);
 }
 
 header .navbar{
@@ -87,8 +100,8 @@ header .navbar ul li a{
     display: block;
     padding: 1rem;
     margin: 1.5rem 0;
-    background: #333;
-    color: #fff;
+    background: var(--fourth-color);
+    color: var(--primary-color);
     font-size: 2rem;
     border-radius: 5rem;
 }
@@ -102,14 +115,21 @@ header .navbar ul li a:hover{
     position: fixed;
     top: 2rem;
     right: 2rem;
-    background: #333;
-    color: #fff;
+    background: var(--fourth-color);
+    color: var(--primary-color);
     cursor: pointer;
     font-size: 2.5rem;
     padding: 1rem 1.5rem;
     z-index: 1000;
     display: none;
 }
+
+
+#icon{
+    width: 4rem;
+    cursor: pointer;
+}
+
 
 
 /* Home starts */
@@ -128,12 +148,12 @@ section{
 
 .home h3{
     font-size: 2.5rem;
-    color: #fff;
+    color: var(--primary-color);
 }
 
 .home h1{
     font-size: 5rem;
-    color: #fff;
+    color: var(--primary-color);
 }
 
 .home h1 span{
@@ -142,14 +162,14 @@ section{
 
 .home p{
     font-size: 2rem;
-    color: #eee;
+    color: var(--primary-color);
     padding: 1rem 0;
 }
 
 .btn{
     padding: 0.7rem 3rem;
-    background: #333;
-    color: #ffff;
+    background: var(--fourth-color);
+    color: var(--primary-color);
     cursor: pointer;
     margin-top: 1rem;
     font-size: 2rem;
@@ -168,7 +188,7 @@ section{
 
 /* About starts */
 .about{
-    background-color: #313030;
+    background-color: var(--fourth-color);
 }
 
 .heading{
@@ -176,8 +196,8 @@ section{
     margin: 0 6rem;
     font-size: 4rem;
     padding: 1rem;
-    border-bottom: 0.1rem solid #fff4;
-    color: #fff;
+    border-bottom: 0.2rem solid var(--primary-color);
+    color: var(--primary-color);
 }
 .heading span{
     color: var(--yellow);
@@ -203,7 +223,7 @@ section{
     font-weight: normal;
 }
 .about .row .info h3 span{
-    color: #eee;
+    color: var(--primary-color);
     padding: 0 0.5rem;
 }
 
@@ -215,7 +235,7 @@ section{
 }
 .about .row .counter .box{
     width: 20rem;
-    background: #222;
+    background: var(--secondary-color);
     text-align: center;
     padding: 2rem;
     margin: 2rem;
@@ -226,7 +246,11 @@ section{
 }
 .about .row .counter .box h3{
     font-size: 2rem;
-    color: #fff;
+    color: var(--primary-color);
+}
+
+.download{
+    background-color: var(--secondary-color);
 }
 
 
@@ -245,24 +269,24 @@ section{
     width: 27rem;
     margin: 4rem 1rem;
     padding-left: 4rem;
-    border-left: 0.2rem solid #fff;
+    border-left: 0.2rem solid var(--primary-color);
     position: relative;
 }
 .education .box-container .box span{
     font-size: 1.3rem;
-    background: #222;
-    color: #fff;
+    background: var(--fourth-color);
+    color: var(--primary-color);
     border-radius: 5rem;
     padding: 0.5rem 2.5rem;
 }
 .education .box-container .box h3{
     font-size: 2rem;
-    color: #fff;
+    color: var(--primary-color);
     padding-top: 1.5rem;
 }
 .education .box-container .box p{
     font-size: 1.4rem;
-    color: #eee;
+    color: var(--primary-color);
     padding: 1rem 0;
 }
 .education .box-container .box i{
@@ -275,7 +299,7 @@ section{
     line-height: 5rem;
     text-align: center;
     font-size: 2rem;
-    color: #fff;
+    color: var(--primary-color);
     background-color: var(--yellow);
 }
 
@@ -284,7 +308,7 @@ section{
 
 /* Portfolio starts */
 .portfolio{
-    background-color: #4f4f4f;
+    background-color: var(--fourth-color);
 }
 
 .portfolio .box-container{
@@ -333,7 +357,7 @@ section{
 .portfolio .box-container .box .layer h2{
     font-family: agbalumo, Times New Roman;
     font-size: 2.5rem;
-    color: #eee;
+    color: var(--primary-color);
 }
 .portfolio .box-container .box .layer h3{
     font-weight: 500;
@@ -345,7 +369,7 @@ section{
     text-decoration: none;
     font-size: 1.5rem;
     line-height: 4rem;
-    background-color: #fff;
+    background-color: var(--primary-color);
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -353,7 +377,7 @@ section{
 }
 .portfolio .box-container .box .layer a:hover{
     background-color: #ff004f;
-    color: #eee;
+    color: var(--primary-color);
 }
 
 .portfolio .box-container .box:hover .layer{
@@ -389,8 +413,8 @@ section{
 .contact .row form .box{
     padding: 1.5rem;
     margin: 1rem 0;
-    background: #3333;
-    color: #fff;
+    background: var(--ternary-color);
+    color: var(--primary-color);
     text-transform: none;
     font-size: 1.7rem;
     width: 100%;
@@ -405,7 +429,7 @@ section{
 }
 .contact .row .content .title{
     text-transform: uppercase;
-    color: #fff;
+    color: var(--primary-color);
     font-size: 3rem;
     padding-bottom: 2rem;
 }
@@ -413,7 +437,7 @@ section{
     display: flex;
     align-items: center;
     font-size: 2rem;
-    color: #eee;
+    color: var(--primary-color);
     padding: 1rem 0;
     font-weight: normal;
 }
@@ -425,11 +449,11 @@ section{
     width: 100%;
     text-align: center;
     padding: 1.563rem 0;
-    background: #262626;
+    background: var(--fourth-color);
     font-weight: 300;
     margin-top: 20px;
     font-size: 1.8rem;
-    color: #eee;
+    color: var(--primary-color);
 }
 
 
@@ -440,7 +464,7 @@ section{
     right: 2rem;
     z-index: 100;
     font-size: 30px;
-    background-color: #fff;
+    background-color: var(--primary-color);
     width: 4rem;
     display: none;
 }
@@ -544,15 +568,16 @@ section{
     align-items: center;
 }
 
-.about h1 {
+/* .about h1 {
     transform: skew(90deg);
     transition: 1s;
 }
+*/
 
 .about .info .animate{
     transform: translate(-200%, 200px);
     transition: 1s;
-}
+} 
 
 
 .about .counter .b1{
@@ -580,14 +605,14 @@ section{
 .education{
     align-items: center;
 }
-.education h1 {
+/* .education h1 {
     transform: skew(90deg);
     transition: 1s;
 }
 .education.show-animate .animate{
     transform: skew(0);
     transition: 1s;
-}
+} */
 
 .education .box-container .box1{
     transform: translate(500%, 700px);
@@ -631,16 +656,16 @@ section{
  .portfolio{
     align-items: center;
  }
- .portfolio h1 {
+ /* .portfolio h1 {
     transform: skew(90deg);
     transition: 1s;
 }
 
 .portfolio.show-animate .animate{
     transform: skew(0);
-}
+} */
 
-
+/* for left side */
 .portfolio .box-container .animate1,
 .portfolio .box-container .animate4,
 .portfolio .box-container .animate7,
@@ -649,18 +674,21 @@ section{
     transform: translate(500%, -500%);
     transition: 1s;
 }
+/* for right side */
 .portfolio .box-container .animate3,
 .portfolio .box-container .animate6,
 .portfolio .box-container .animate9,
 .portfolio .box-container .animate12,
-.portfolio .box-container .animate14{
+.portfolio .box-container .animate15{
     transform: translate(-500%, -500%);
     transition: 1s;
 }
+/* for middle */
 .portfolio .box-container .animate2,
 .portfolio .box-container .animate5,
 .portfolio .box-container .animate8,
-.portfolio .box-container .animate11{
+.portfolio .box-container .animate11,
+.portfolio .box-container .animate14{
     transform: skew(90deg);
     transition: 2s;
 }
@@ -669,4 +697,12 @@ section{
     transform: translateX(0);
     transform: skew(0);
     transition: 1.5s;
+}
+
+
+
+/* back to top */
+.top i{
+    color: var(--secondary-color);
+    padding-left: 6px;
 }
