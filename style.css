@@ -550,7 +550,6 @@ section{
     flex-direction: column;
     align-items: start;
     min-height: 100vh;
-    /* overflow: hidden; */
 }
 
 .home .animate{
@@ -568,29 +567,24 @@ section{
     align-items: center;
 }
 
-/* .about h1 {
-    transform: skew(90deg);
-    transition: 1s;
-}
-*/
-
 .about .info .animate{
     transform: translate(-200%, 200px);
     transition: 1s;
 } 
 
-
 .about .counter .b1{
-    transform: translate(-500%, 500px);
+    transform: skew(90deg);
+
 }
 .about .counter .b2{
-    transform: translate(500%, 500px);
+    transform: skew(90deg);
 }
 .about .counter .b3{
-    transform: translate(500%, 250%);
+    transform: skew(90deg);
+
 }
 .about .counter .b4{
-    transform: translate(500%, -1000px);
+    transform: skew(90deg);
 }
 
 
@@ -605,14 +599,6 @@ section{
 .education{
     align-items: center;
 }
-/* .education h1 {
-    transform: skew(90deg);
-    transition: 1s;
-}
-.education.show-animate .animate{
-    transform: skew(0);
-    transition: 1s;
-} */
 
 .education .box-container .box1{
     transform: translate(500%, 700px);
@@ -656,14 +642,7 @@ section{
  .portfolio{
     align-items: center;
  }
- /* .portfolio h1 {
-    transform: skew(90deg);
-    transition: 1s;
-}
 
-.portfolio.show-animate .animate{
-    transform: skew(0);
-} */
 
 /* for left side */
 .portfolio .box-container .animate1,
@@ -671,7 +650,8 @@ section{
 .portfolio .box-container .animate7,
 .portfolio .box-container .animate10,
 .portfolio .box-container .animate13{
-    transform: translate(500%, -500%);
+    /* transform: translate(500%, -500%); */
+    transform: skew(90deg);
     transition: 1s;
 }
 /* for right side */
@@ -680,7 +660,8 @@ section{
 .portfolio .box-container .animate9,
 .portfolio .box-container .animate12,
 .portfolio .box-container .animate15{
-    transform: translate(-500%, -500%);
+    /* transform: translate(-500%, -500%); */
+    transform: skew(90deg);
     transition: 1s;
 }
 /* for middle */
@@ -690,11 +671,11 @@ section{
 .portfolio .box-container .animate11,
 .portfolio .box-container .animate14{
     transform: skew(90deg);
-    transition: 2s;
+    transition: 1s;
 }
 
 .portfolio.show-animate .box{
-    transform: translateX(0);
+    /* transform: translateX(0); */
     transform: skew(0);
     transition: 1.5s;
 }
